@@ -1,6 +1,18 @@
 # flownet_pytorch
 converting Nvidia's pytorch FlowNet with only builtin layers to support to newer pytorch versions
 
+ this implementation heavily draws from the following publication, please cite this if you use any of the layers:
+ 
+ @inproceedings{heinrich2019closing,
+  title={Closing the gap between deep and conventional image registration using probabilistic dense displacement networks},
+  author={Heinrich, Mattias P},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={50--58},
+  year={2019},
+  organization={Springer}
+}
+https://arxiv.org/pdf/1907.10931
+ 
  pytorch-flownet with NVIDIA code is not supported in current pytorch versions
  due to depreciated torch.utils.ffi, no fix available (https://github.com/pytorch/pytorch/issues/15645)
  here a re-implementation of all external functions Resample2d, ChannelNorm and Correlation
